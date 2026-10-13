@@ -85,6 +85,7 @@ cc_defaults {
 
 cc_library {
     name: "libkeymaster_messages",
+    recovery_available: true,
     srcs: [
         "android_keymaster/android_keymaster_messages.cpp",
         "android_keymaster/android_keymaster_utils.cpp",
@@ -115,6 +116,7 @@ cc_library {
 // the function-based keymaster HAL API to the message-based AndroidKeymaster API.
 cc_library {
     name: "libkeymaster_portable",
+    recovery_available: true,
     srcs: [
         "android_keymaster/android_keymaster.cpp",
         "android_keymaster/android_keymaster_messages.cpp",
@@ -225,6 +227,7 @@ cc_library {
 
 cc_library {
     name: "libsoft_attestation_cert",
+    recovery_available: true,
     srcs: [
         "contexts/soft_attestation_cert.cpp",
     ],
@@ -239,6 +242,7 @@ cc_library {
 
 cc_library {
     name: "libpuresoftkeymasterdevice",
+    recovery_available: true,
     srcs: [
         "android_keymaster/keymaster_configuration.cpp",
         "contexts/soft_attestation_context.cpp",
@@ -507,6 +511,7 @@ cc_library {
 // used as the basis of a device's KeyMint implementation (it will fail VTS tests).
 cc_library {
     name: "lib_android_keymaster_keymint_utils_fake_latest",
+    recovery_available: true,
     vendor_available: true,
     visibility: [
         ":__subpackages__",
@@ -534,6 +539,7 @@ cc_library {
 
 cc_library {
     name: "libkeymint_fake_latest",
+    recovery_available: true,
     vendor_available: false,
     visibility: [
         "//system/security/keystore2/src/km_compat",
@@ -609,6 +615,7 @@ cc_library {
 
 cc_library {
     name: "libcppcose_rkp",
+    recovery_available: true,
     vendor_available: true,
     host_supported: true,
     srcs: [
